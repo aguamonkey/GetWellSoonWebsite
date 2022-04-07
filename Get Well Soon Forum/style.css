@@ -1,0 +1,336 @@
+/* global */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font: size 12px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(145, 216, 158);
+    color: #FEFEFE;
+}
+
+a{
+    color: #FEFEFE;
+    font-weight: bolder;
+    text-decoration: none;
+    /*
+    font-family: SassyMolassy;
+    font: size 30px; */
+    
+}
+
+h1 {
+    font: size 30px;
+    font-weight: bolder;
+    font-family: SassyMolassy;
+
+}
+
+/* home.html */
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum{
+    margin-top: 20px;
+}
+
+.subforum-title{
+    background-color: #ffc603; 
+    
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+    
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #d27de8;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i{
+    font-size: 30px;
+}
+
+.subforum-divider{
+    display: none;
+}
+
+/*For the smartphones*/
+@media screen and (max-width: 460px){
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+
+    .subforum-stats{
+        font-size: 12px;
+    }
+
+    .subforum-divider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    
+    }
+    
+}
+
+/*for the tablets*/
+@media screen and (min-width: 460px) and (max-width: 1024px){
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .subforum-icon i{
+        font-size: 30px;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+}
+
+/* NavBar */
+
+header{
+    margin-inline: 10px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navigation{
+    background-color: #d27de8;
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right: 10px;
+
+}
+
+.nav-list{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    float: right;
+    display: block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+}
+
+.nav-item a:hover{
+    background-color: #ffc603;
+}
+
+.close-icon i{
+    font-size: 60px;
+    float: left;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.bar-icon{
+    font-size: 60px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffc603;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: SassyMolassy;
+    src: url(SassyMolassy.otf);
+}
+
+.brand{
+    font-size: 60px;
+    display: inline-block;
+    font-family: SassyMolassy;
+}
+
+/*navbar for smartphones*/
+
+@media screen and (max-width: 460px) {
+    .navigation{
+        max-height: auto;
+    
+    }
+    
+
+    
+    .nav-item a{
+        float: left;
+        display: inline;
+        text-align: center;
+        margin-inline: 3px;
+        font-size: 10px;
+        padding: 5px;
+    }
+    
+    
+    .close-icon i{
+        font-size: 30px;
+    }
+    
+    
+    .brand{
+        font-size: 20px;
+
+    }
+
+}
+
+/*search box*/
+
+.search-box{
+    border:solid 1px #d27de8;
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #d27de8;
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color: #FFF;
+    color: #d27de8;
+}
+
+.search-box button:hover{
+    background-color: #d27de8;
+    color: #FFF;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/* Search Box For Smartphones */
+
+@media screen and (max-width: 460px) {
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+
+    }
+    
+}
+
+/*Forum info*/
+.forum-info{
+    padding: 20px;
+    background-color: #ffc603;
+}
+
+.chart{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d27de8;
+    display: block;
+    text-align: center;
+}
+
+/* Posts.html styling */
+
+.table-head{
+    display: flex;
+
+}
+
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: #ffc603;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/*table body*/
+.table-row{
+    display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+
+    padding: 5px;
+    margin: 2px;
+    background-color: #d27de8;
+
+}
